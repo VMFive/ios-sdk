@@ -40,21 +40,59 @@
 ```
 
 ## 設計原生廣告 Layout
-1. 創建 ```CardViewBinder``` ，透過 ```CardViewBinder``` 指定廣告素材和 UI 元件的關係 <TODO -上下交換順序，然後補充是在 onCreate 裡面加入>
-    * ```public final Builder loadingId(final int loadingId)```：綁定 Loading image 與 UI 元件
+1. 設計原生廣告的 Layout，可以參考範例專案的 ```CustomView.xib```
+2. 實作 ```VANativeAdViewRenderProtocol```，定義如下：：
+    * ```-(nonnull UILabel *)nativeTitleTextLabel```：回傳要展示標題文字的 ```UILabel```
+    * ```-(nonnull UILabel *)nativeMainTextLabel```：回傳要展示說明文字的 ```UILabel```
+    * ```-(nonnull UILabel *)nativeSubtitleTextLabel```：回傳要展示副標題的 ```UILabel```
+    * ```-(nonnull UILabel *)nativeCallToActionTextLabel```：回傳要要展示CTA文字的```UILabel```
+    * ```-(nonnull UITextField *)descriptionTextField```：回傳要展示說明文字的 ```UITextField```
+    * ```-(nonnull UIView *)nativeVideoView```：回傳 ```Video Player``` 的 ```View```
+    * ```-(nonnull UIImageView *)nativeMainImageView```：回傳要展示 ```Main Image``` 的 ```UIImageView```
+    * ```-(nonnull UIImageView *)nativeIconImageView```：回傳要展示 ```icon``` 的 ```UIImageView```
+    * ```-(nonnull NSArray *)clickableViews```：回傳可以點擊的 ```View```，可以註冊多個 ```View``` 為可以點擊
+    * ```+(nonnull UINib *)nibForAd```：回傳原生廣告的 ```Nib```
 
     範例：
-    ```java
-    // native video layout builder
-    CardViewBinder vBinder = new CardViewBinder.Builder(R.layout.card_ad_item)
-       .loadingId(R.id.native_loading_image) 
-       .mainImageId(R.id.native_main_image) 
-       .titleId(R.id.native_title) 
-       .videoPlayerId(R.id.native_video_layout) 
-       .iconImageId(R.id.native_icon_image)
-       .callToActionId(R.id.native_cta) 
-       .build();
+    ```Objective-C
+	/**
+	 *  回傳擺放Title的Label
+	 */
+	-(UILabel *)nativeTitleTextLabel
+	{
+	    return _titleLabel;
+	}
+	
+	/**
+	 *  回傳擺放Icon的ImageView
+	 */
+	-(UIImageView *)nativeIconImageView
+	{
+	    return _iconView;
+	}
+	
+	/**
+	 *  回傳覆蓋Video View的UIView
+	 *
+	 *  @warning 這裡必須注意，若View的不符合Video的Aspect Ratio，則Video會以AspectFit的方式呈現（可能帶黑邊）
+	 */
+	-(UIView *)nativeVideoView
+	{
+	    return _videoView;
+	}
     ```
+3. 生成原生廣告的 ```Layout```，可以直接回傳 ```nib```:
+     
+     ```
+	 +(UINib *)nibForAd
+	{
+	    return [UINib nibWithNibName:@"CustomView" bundle:nil];
+	}
+     ```
+
+
+**完整的代碼可以參考可以參考範例專案的 ```VANativeAdViewProtocol.h``` 和 ```CustomView.m```**
+
 
 ## 載入並展示原生廣告
 開始撰寫代碼之前，需要先引入以下的物件，完整的程式碼請參考 ```ExampleNative.java```
