@@ -130,7 +130,58 @@
 	    [_nativeAd loadAd];
 	}
     ```
+2. 實作 ```VANativeAdDelegate```，定義如下：
+    * ```- (void)nativeAdDidLoad:(nonnull VANativeAd *)nativeAd;```：廣告素材已經成功載入，隨時可以展示。
+    * ```- (void)nativeAd:(nonnull VANativeAd *)nativeAd didFailedWithError:(nonnull NSError *)error;```：載入廣告時出現錯誤.錯誤原因用錯誤代碼表示.
+    * ```- (void)nativeAdDidClick:(nonnull VANativeAd *)nativeAd;```：廣告被點擊。
+    * ```- (void)nativeAdDidFinishHandlingClick:(nonnull VANativeAd *)nativeAd;```：點擊觸發的動作已經處理完成。
+    
+    錯誤碼的定義如下：
+    * ```VAErrorUnknown = 0```：
+    * ```VAErrorBadRequest=1```：原生廣告的參數無效或是錯誤
+    * ```VAErrorNotRegistered```：沒有向SDK註冊原生廣告的View 
+    * ```VAErrorNotLoaded```：原生廣告載入失敗
+    * ```VAErrorBadNetwork```：沒有網路連線
+    * ```VAErrorDownloadFailed```：廣告素材下載失敗
+    * ```VAErrorBadView```：原生廣告的View是空的
+    * ```VAErrorRegistered```：重複註冊了相同原生廣告的View
+    * ```VAErrorWrongSize```：原生廣告的View大小不符合規範
+    * ```VAErrorOSNotSupport```：iOS版本低於7.0無法播放影音廣告
 
+3. 創建```VANativeAdViewRender```，展示原生廣告；需要傳入 ```nativeAd``` 物件與原生廣告 ```Layout``` 的 ```Classname```，然後呼叫 ```renderWithCompleteHandler``` 方法。 
+    
+    範例：
+    ```Objective-C
+    VANativeAdViewRender *render = [[VANativeAdViewRender alloc] initWithNativeAd:_nativeAd customizedAdViewClass:[CustomView class]];
+[render renderWithCompleteHandler:^(UIView<VANativeAdViewRenderProtocol> *view, NSError *error){
+            if (!error)
+            {
+                _adView = view;
+                _adView.center = self.view.center;
+                [self.view addSubview:_adView];
+            }
+            else
+            {
+                NSLog(@"Render did fail With error : %@", error);
+            }
+            
+        }];
+    ```	
+    **要注意的是  ```VANativeAdViewRender ``` 必須要在廣告素材都已經載入後才能按照  ```VANativeAdViewRenderProtocol ``` 將素材展示；** 因此必須在廣告素材全部載入後再呼叫  ```renderWithCompleteHandler ``` 方法展示素材。
+    
+    例如範例專案中，我們就是在  ```nativeAdDidLoad ``` 這個  ```delegate ``` 中創建是  ```VANativeAdViewRender ``` 並且呼叫  ```renderWithCompleteHandler ``` 方法。
+
+4. 釋放廣告資源
+    ```Objective-C
+    -(void)viewWillDisappear:(BOOL)animated
+	{
+	    [super viewWillDisappear:animated];
+	    
+	    [_nativeAd unloadAd];
+	}
+    ```
+
+**有關 ```NativeAd``` 的詳細用法，可以參考範例專案中的 ```VideoNativeViewReder.m```**
 
 ## 在TableView中置入原生廣告
 
