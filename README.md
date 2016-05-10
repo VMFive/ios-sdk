@@ -95,30 +95,40 @@
 
 
 ## 載入並展示原生廣告
-開始撰寫代碼之前，需要先引入以下的物件，完整的程式碼請參考 ```ExampleNative.java```
+開始撰寫代碼之前，需要先引入以下的 Header 檔
 
-```java
-import com.core.adnsdk.AdObject;
-import com.core.adnsdk.CardAdRenderer;
-import com.core.adnsdk.CardViewBinder;
-import com.core.adnsdk.ErrorMessage;
-import com.core.adnsdk.AdViewType;
-import com.core.adnsdk.NativeAdAdapter;
-import com.core.adnsdk.AdPoolListener;
+```Objective-C
+#import "VANativeAdViewRender.h" //SDK提供的header檔
+#import "CustomView.h" // 對應原生廣告 xib 的 header 檔
+#import "VANativeAd.h" //SDK提供的header檔
 ```
 
-1. 新增一個 ```CardViewBinder``` 物件，將 ```Layout``` 裡的 UI 元件 id 透過 ```CardViewBinder``` 與綁定廣告素材的關聯與規則
+代碼需要實作 ```VANativeAdDelegate```,```VANativeAdViewRenderDelegate```
+```Objective-C
+@interface VideoNativeRenderViewController () <VANativeAdDelegate, VANativeAdViewRenderDelegate>
+```
+
+1. 創建```VANativeAd```，設定屬性並且載入廣告，需要傳入兩個參數：一個任意的字串作為後台出報表用的標示以及指定廣告類型，原生廣告請用```kVAAdTypeVideoCard```。
+
+    填入正確的 ```API KEY``` 或是開啟測試模式後台才會投放廣告；**這裡要注意的是當測試模式開啟時無論有沒有填入正確的 ```API KEY``` 都只能取得沒有分潤的測試廣告**。 
     
     範例：
-    ```java
-    CardViewBinder vBinder = new CardViewBinder.Builder(R.layout.custom_video_ad_list_item)
-       .loadingId(R.id.native_loading_image)
-       .mainImageId(R.id.native_main_image)
-       .titleId(R.id.native_title)
-       .videoPlayerId(R.id.native_video_layout)
-       .iconImageId(R.id.native_icon_image)
-       .callToActionId(R.id.native_cta)
-       .build();
+    
+    ```Objective-C
+	- (void)viewDidLoad {
+	    [super viewDidLoad];
+	    // Do any additional setup after loading the view.
+	
+	    // 建立 NativeAd 物件
+	    _nativeAd = [[VANativeAd alloc] initWithPlacement:@"VMFiveAdNetwork_SampleApp_NativeRender" adType:kVAAdTypeVideoCard];
+	    
+	    _nativeAd.testMode = YES;
+	    _nativeAd.apiKey = @"YOUR API KEY HERE";
+	    _nativeAd.delegate = self;
+	    
+	    // 載入廣告
+	    [_nativeAd loadAd];
+	}
     ```
 
 
