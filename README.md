@@ -183,7 +183,7 @@
 
 **有關 ```NativeAd``` 的詳細用法，可以參考範例專案中的 ```VideoNativeViewReder.m```**
 
-## 在TableView中置入原生廣告
+## 在 TableView 中置入原生廣告
 開始撰寫代碼之前，需要先引入以下的 Header 檔
 
 ```Objective-C
@@ -226,3 +226,23 @@ _adCellProvider.apiKey = @"your_key";
     * ```-(NSUInteger)tableView:(nonnull UITableView *)tableView adStartRowInSection:(NSUInteger)section;```：在這個 ```delegate``` 裡面回傳 ```section``` 內廣告的起始位置。
     * ```-(NSUInteger)tableView:(nonnull UITableView *)tableView adOffsetInSection:(NSUInteger)section;```：在這個 ```delegate``` 裡面回傳 ```section``` 內的廣告間隔。
     * ```-(NSInteger)tableView:(nonnull UITableView *)tableView numberOfAdsInSection:(NSUInteger)section;```:在這個 ```delegate``` 裡面回傳一個 ```section``` 內要插入的廣告個數，如果要插入無限多個廣告則回傳 -1；若無實作此 ```delegate``` 則預設為無限插入廣告。
+
+5. 實作 ```VAAdCellProvider```，接收 ```SDK``` 的事件。
+    ```VAAdCellProvider``` 的定義如下：
+    * ```-(void)adCellProvider:(nonnull VAAdCellProvider *)adCellProvider didFailWithError:(nonnull NSError *)error;```：當 ```adCellProvider``` 無法載入廣告時會發送這個事件，並且透過 ```Error``` 物件告知錯誤原因。
+    * ```-(void)adCellDidLoadAtIndexPath:(nonnull NSIndexPath *)indexPath;```：當廣告成功載入時 ```SDK``` 會發送這個事件
+    * ```-(void)adCellAtIndexPath:(nonnull NSIndexPath *)indexPath didFaislWithError:(nonnull NSError *)error;```：當某個 ```Cell``` 無法插入廣告時，```SDK``` 會發送這個事件並且告知發生錯誤的 ```index path``` 與錯誤原因。
+
+    錯誤碼的定義如下：
+    * ```VAErrorUnknown = 0```：
+    * ```VAErrorBadRequest=1```：原生廣告的參數無效或是錯誤
+    * ```VAErrorNotRegistered```：沒有向SDK註冊原生廣告的View 
+    * ```VAErrorNotLoaded```：原生廣告載入失敗
+    * ```VAErrorBadNetwork```：沒有網路連線
+    * ```VAErrorDownloadFailed```：廣告素材下載失敗
+    * ```VAErrorBadView```：原生廣告的View是空的
+    * ```VAErrorRegistered```：重複註冊了相同原生廣告的View
+    * ```VAErrorWrongSize```：原生廣告的View大小不符合規範
+    * ```VAErrorOSNotSupport```：iOS版本低於7.0無法播放影音廣告
+
+完整的代碼請參考範例專案中的 ```VideoCustomAdViewAdapterViewController.m```
