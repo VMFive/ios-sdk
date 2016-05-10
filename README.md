@@ -137,7 +137,7 @@
     * ```- (void)nativeAdDidFinishHandlingClick:(nonnull VANativeAd *)nativeAd;```：點擊觸發的動作已經處理完成。
     
     錯誤碼的定義如下：
-    * ```VAErrorUnknown = 0```：
+    * ```VAErrorUnknown = 0```：不明的錯誤
     * ```VAErrorBadRequest=1```：原生廣告的參數無效或是錯誤
     * ```VAErrorNotRegistered```：沒有向SDK註冊原生廣告的View 
     * ```VAErrorNotLoaded```：原生廣告載入失敗
@@ -234,7 +234,7 @@ _adCellProvider.apiKey = @"your_key";
     * ```-(void)adCellAtIndexPath:(nonnull NSIndexPath *)indexPath didFaislWithError:(nonnull NSError *)error;```：當某個 ```Cell``` 無法插入廣告時，```SDK``` 會發送這個事件並且告知發生錯誤的 ```index path``` 與錯誤原因。
 
     錯誤碼的定義如下：
-    * ```VAErrorUnknown = 0```：
+    * ```VAErrorUnknown = 0```：不明的錯誤
     * ```VAErrorBadRequest=1```：原生廣告的參數無效或是錯誤
     * ```VAErrorNotRegistered```：沒有向SDK註冊原生廣告的View 
     * ```VAErrorNotLoaded```：原生廣告載入失敗
@@ -245,4 +245,4 @@ _adCellProvider.apiKey = @"your_key";
     * ```VAErrorWrongSize```：原生廣告的View大小不符合規範
     * ```VAErrorOSNotSupport```：iOS版本低於7.0無法播放影音廣告
 
-完整的代碼請參考範例專案中的 ```VideoCustomAdViewAdapterViewController.m```
+**完整的代碼請參考範例專案中的 ```VideoCustomAdViewAdapterViewController.m```**
