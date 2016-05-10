@@ -184,24 +184,45 @@
 **有關 ```NativeAd``` 的詳細用法，可以參考範例專案中的 ```VideoNativeViewReder.m```**
 
 ## 在TableView中置入原生廣告
+開始撰寫代碼之前，需要先引入以下的 Header 檔
 
-1. 在開始撰寫程式碼之前,請先在 ```AndroidManifest.xml``` 中宣告插頁廣告的 ```Actitivity ```
-    * 直屏的 ```Activity```：
+```Objective-C
+#import "VideoCardAdapterViewController.h"
+#import "VAAdCellProvider.h"
+#import "CustomView.h"
+```
+
+代碼需要實作 ```VAAdCellProviderDelegate```,```VAAdCellProviderDataSource```
+```Objective-C
+@interface VideoCardAdapterViewController () <UITableViewDataSource, UITableViewDelegate, VAAdCellProviderDelegate, VAAdCellProviderDataSource>
+```
+
+1. 建立原生廣告的 ```Attribute```，在 ```customAdViewClass``` 填入原生廣告 ```class name``` ：
   
-    ```java
-    <activity
-   android:name="com.core.adnsdk.InterstitialActivity"
-   android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-   android:hardwareAccelerated="true">
-    </activity>
-    ```
-    * 轉橫屏全螢幕播放的 ```Activity```:
-  
-    ```java
-    <activity
-   android:name="com.core.adnsdk.FullScreenVideoActivity"
-   android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-   android:screenOrientation="landscape"
-   android:hardwareAccelerated="true">
-    </activity>
-    ```
+    ```Objective-C
+ VANativeAdViewAttributeObject *attribute = [[VANativeAdViewAttributeObject alloc] initWithContainer:_tableView];
+ attribute.customAdViewClass = [CustomView class];
+    ```	
+2. 建立 ```AdCellProvider```
+    ```Objective-C
+ _adCellProvider = [[VAAdCellProvider alloc] initWithPlacement:@"VMFiveAdNetwork_SampleApp_CardAdapter" adType:kVAAdTypeVideoCard tableView:_tableView forAttributes:attribute];
+    ```	
+    
+    參數定義如下 ：
+    * ```initWithPlacement```:一個任意的字串作為廣告版位的名稱，這個名稱會在後台報表中的 ```Placement``` 欄位展示，可以根據這個字串在後台觀察廣告的成效。
+    * ```adType```:指定原生廣告的類別，影音原生廣告請填 ```kVAAdTypeVideoCard```
+    * ```tableView```:要插入原生廣告的 ```tableView```
+    * ```forAttributes```:指定好原生廣告類別的 ```VANativeAdViewAttributeObject```
+
+3. 設定 ```AdCellProvider``` 並且載入廣告，在載入廣告之前必須先填入正確的 ```API KEY```，或是開啟測試模式才能取得廣告。**要注意的是，App 上線前必須確定關閉測試模式。** 
+    ```Objective-C
+_adCellProvider.testMode = YES;
+_adCellProvider.apiKey = @"your_key";
+ [_adCellProvider loadAds];
+    ```	
+4. 實作 ```VAAdCellDataProvider```，設定每個 ```section``` 要插入的廣告總數，該 ```section``` 第一個廣告出現的 ```index```，以及廣告和廣告之間間隔的 ```row``` 數。
+    
+    ```VAAdCellDataProvider``` 定義如下 ：
+    * ```-(NSUInteger)tableView:(nonnull UITableView *)tableView adStartRowInSection:(NSUInteger)section;```：在這個 ```delegate``` 裡面回傳 ```section``` 內廣告的起始位置。
+    * ```-(NSUInteger)tableView:(nonnull UITableView *)tableView adOffsetInSection:(NSUInteger)section;```：在這個 ```delegate``` 裡面回傳 ```section``` 內的廣告間隔。
+    * ```-(NSInteger)tableView:(nonnull UITableView *)tableView numberOfAdsInSection:(NSUInteger)section;```:在這個 ```delegate``` 裡面回傳一個 ```section``` 內要插入的廣告個數，如果要插入無限多個廣告則回傳 -1；若無實作此 ```delegate``` 則預設為無限插入廣告。
