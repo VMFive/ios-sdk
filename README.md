@@ -1,7 +1,6 @@
 # iOS-SDK
 - [概論](https://github.com/applauseadn/ios-sdk#概論)
-- [CocoaPods導入 SDK](https://github.com/applauseadn/ios-sdk#cocoapods導入-sdk)
-- [手動導入 SDK](https://github.com/applauseadn/ios-sdk#導入-sdk)
+- [安裝方法](https://github.com/applauseadn/ios-sdk#安裝方法)
 - [設計原生廣告 Layout](https://github.com/applauseadn/ios-sdk#設計原生廣告-layout)
 * [載入並展示原生廣告](https://github.com/applauseadn/ios-sdk#載入並展示原生廣告)
 * [在 TableView 中置入原生廣告](https://github.com/applauseadn/ios-sdk#在-tableview-中置入原生廣告)
@@ -15,11 +14,12 @@
 
 **iOS SDK 完整支援 iOS 7.0 以上的裝置。**在這份文件中我們會詳細介紹，如何設計與排版原生廣告，並且利用 SDK 提供的 ```Render``` 機制產生原生廣告的 ```View```，並且利用 SDK 提供的 API 將原生廣告置入 ```TableView``` 中.
 
-## CocoaPods導入 SDK
+## 安裝方法
+### CocoaPods
 1. 在 `Podfile` 內加入 `pod 'VMFiveAdNetwork', '~> 2.1.0'`
 2. 使用 `pod install` 安裝
 
-## 手動導入 SDK
+### 手動
 1. 下載此專案中最新版 iOS SDK
 2. 將 SDK 的資料夾拖拉到您的 Xcode 的專案中**(建議放在專案目錄下)**
 3. 在 ```Build Phases``` 中的 ```Link Binary with Libraries``` 中加入 ```libVMFiveAdNetwork.a``` 與下列的 ```framwork``` 和 ```.tbd```
@@ -33,8 +33,9 @@
     * ```SystemConfiguration.framework```
     * ```AVFoundation.framework```
 4. 在 ```Copy Bundle Resource``` 中加入 ```vres.zip```
-5. 在 ```Build Settings``` 中的 ```Other Link Flag``` 加入 -ObjC
+5. 在 ```Build Settings``` 中的 ```Other Link Flag``` 加入 `-ObjC`
 
+### plist 設定
 **iOS 9 需要在 ```info.plist``` 裡面做以下修改，避免廣告請求失敗：**
 ```Objective-C
 <key>NSAppTransportSecurity</key>
