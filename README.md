@@ -22,13 +22,16 @@
 ### 手動
 1. 下載最新版 [iOS SDK](https://github.com/applauseadn/ios-sdk/releases)
 2. 解壓縮資料夾後, 在專案內選擇 `Add Files to YourProject`
-![](https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.02.14.png)
+<br>
+<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.02.14.png" width="289" height="226" />
 
 3. 選擇 `VMFiveAdNetwork` 資料夾加入
-![](https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.08.51.png)
+<br>
+<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.08.51.png" width="258" height="251" />
 
 4. 加入完成後, 從 `Xcode` 看起來會是
-![](https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.13.53.png)
+<br>
+<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.13.53.png" width="141" height="188" />
 
 5. 然後我們在 `Build Phases` 中的 `Link Binary With Libraies` 加入下列的 frameworks
 	* ```CoreMedia.framework```
@@ -39,10 +42,12 @@
 	* ```libz.tbd```
 	* ```SystemConfiguration.framework```
 	* ```AVFoundation.framework```
-![](https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.23.45.png)
+<br>
+<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.23.45.png" width="696" height="442" />
 
 6. 在 `Build Settings` 中的 `Other Linker Flags` 加入 `-ObjC`
-![](https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.25.37.png)
+<br>
+<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.25.37.png" width="696" height="442" />
 
 ### plist 設定
 **iOS 9 需要在 ```info.plist``` 裡面做以下修改，避免廣告請求失敗：**
@@ -53,7 +58,8 @@
 		<true/>
 	</dict>
 ```
-![](https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.29.20.png)
+<br>
+<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.29.20.png" width="696" height="442" />
 
 ## 設計原生廣告 Layout
 1. 設計原生廣告的 Layout，可以參考範例專案的 ```CustomView.xib```
