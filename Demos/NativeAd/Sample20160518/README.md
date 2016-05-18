@@ -4,7 +4,7 @@
 ![](https://github.com/applauseadn/ios-sdk/blob/master/Demos/NativeAd/Sample20160518.gif)
 
 範例下載
-[Sample20160518.zip](https://github.com/applauseadn/ios-sdk/blob/master/Demos/NativeAd/Sample20160518.zip)
+[Sample20160518.zip](https://github.com/applauseadn/ios-sdk/blob/master/Demos/NativeAd/Sample20160518.zip?raw=true)
 
 ## 範例目的
 
