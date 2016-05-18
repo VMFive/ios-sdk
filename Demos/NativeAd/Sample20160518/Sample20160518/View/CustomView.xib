@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sax-9X-9TS">
+                    <rect key="frame" x="139" y="130" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTS-FC-wWl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="點這邊瞭解更多" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM5-Yu-1BT">
+                    <rect key="frame" x="80" y="240" width="240" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IkK-fe-qL1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf6-yT-Es4">
+                    <rect key="frame" x="0.0" y="240" width="80" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="kUX-ID-AXa"/>
+                        <constraint firstAttribute="height" constant="40" id="o0c-ba-WhF"/>
+                    </constraints>
+                    <state key="normal" title="關閉">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xVH-jp-EPo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BTS-FC-wWl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0m8-VS-0FR"/>
+                <constraint firstAttribute="bottom" secondItem="bf6-yT-Es4" secondAttribute="bottom" id="1pk-rX-ein"/>
+                <constraint firstItem="uM5-Yu-1BT" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-80" id="LmA-hh-8hl"/>
+                <constraint firstItem="bf6-yT-Es4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MiU-za-5V7"/>
+                <constraint firstAttribute="bottom" secondItem="uM5-Yu-1BT" secondAttribute="bottom" id="Ril-7k-uqG"/>
+                <constraint firstAttribute="trailing" secondItem="uM5-Yu-1BT" secondAttribute="trailing" id="SXQ-OO-Vea"/>
+                <constraint firstItem="BTS-FC-wWl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="XaC-Ln-6g8"/>
+                <constraint firstItem="BTS-FC-wWl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oR3-dD-hps"/>
+                <constraint firstItem="BTS-FC-wWl" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-40" id="qmh-qu-POk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="ctaLabel" destination="uM5-Yu-1BT" id="a7u-XZ-bQo"/>
+                <outlet property="titleLabel" destination="sax-9X-9TS" id="wWN-fD-R2d"/>
+                <outlet property="videoView" destination="BTS-FC-wWl" id="uhK-cS-3gD"/>
+            </connections>
+            <point key="canvasLocation" x="411" y="346"/>
+        </view>
+    </objects>
+</document>
