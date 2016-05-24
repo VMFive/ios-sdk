@@ -95,6 +95,9 @@ NSUInteger const kVAAdCellProviderAdOffsetInsertOnlyOne;
  */
 -(void)unloadAds;
 
+-(void)beginUpdates;
+-(void)endUpdates;
+
 
 /** @name Index Convertation Methods */
 

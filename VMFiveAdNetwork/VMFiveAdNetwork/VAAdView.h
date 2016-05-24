@@ -252,7 +252,7 @@ typedef NS_ENUM(NSInteger, VAAdViewAutoRefreshTime)
  *          return CGSizeMake(maxWidth, maxWidth * 9.0f/16.0f);
  *      };
  */
-@property (nonatomic, copy, nullable) CGSize(^customAdViewSizeHandler)(CGFloat maxWidth);
+@property (nonatomic, copy, nullable) CGSize(^customAdViewSizeHandler)(CGFloat maxWidth, CGFloat ratio);
 
 
 @end

@@ -26,6 +26,7 @@ typedef NS_ENUM (NSUInteger, VAErrorCode) {
     VAErrorNotLoaded,               ///< NativeAd not loaded
     VAErrorBadNetwork,              ///< Bad Network issue
     VAErrorDownloadFailed,          ///< Download Failed issue
+    VAErrorResourceCheckingFailed,  ///< Resource Checking Fail issue
     VAErrorBadView,                 ///< Bad View for registering
     VAErrorRegistered,              ///< View input has been register
     VAErrorWrongSize,               ///< View input has wrong size
