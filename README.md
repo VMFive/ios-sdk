@@ -1,6 +1,7 @@
 # iOS-SDK
 - [概論](https://github.com/applauseadn/ios-sdk#概論)
 - [安裝方法](https://github.com/applauseadn/ios-sdk#安裝方法)
+- [Demos](https://github.com/applauseadn/ios-sdk#demos)
 - [設計原生廣告 Layout](https://github.com/applauseadn/ios-sdk#設計原生廣告-layout)
 * [載入並展示原生廣告](https://github.com/applauseadn/ios-sdk#載入並展示原生廣告)
 * [在 TableView 中置入原生廣告](https://github.com/applauseadn/ios-sdk#在-tableview-中置入原生廣告)
@@ -65,6 +66,9 @@
 在 `Build Settings` 中的 `Enable Bitcode` 設定為 `NO`
 <br>
 <img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8A%E5%8D%8810.54.26.png" width="890" height="233" />
+
+## Demos
+未來所有的範例以及使用方法, 將移動至專案 [ios-sdk-demo](https://github.com/applauseadn/ios-sdk-demo), 如果有任何串接上的問題, 也可以至 [Issue](https://github.com/applauseadn/ios-sdk-demo/issues) 中提出.
 
 ## 設計原生廣告 Layout
 1. 設計原生廣告的 Layout，可以參考範例專案的 ```CustomView.xib```
