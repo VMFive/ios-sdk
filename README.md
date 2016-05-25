@@ -64,7 +64,7 @@
 ### 關閉 bitcode
 在 `Build Settings` 中的 `Enable Bitcode` 設定為 `NO`
 <br>
-<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.29.20.png" width="696" height="442" />
+<img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8A%E5%8D%8810.54.26.png" width="890" height="233" />
 
 ## 設計原生廣告 Layout
 1. 設計原生廣告的 Layout，可以參考範例專案的 ```CustomView.xib```
