@@ -68,7 +68,9 @@
 <img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8A%E5%8D%8810.54.26.png" width="890" height="233" />
 
 ## Demos
-未來所有的範例以及使用方法, 將移動至專案 [ios-sdk-demo](https://github.com/applauseadn/ios-sdk-demo), 如果有任何串接上的問題, 也可以至 [Issue](https://github.com/applauseadn/ios-sdk-demo/issues) 中提出.
+未來所有的範例以及使用方法, 將移動至專案 [ios-sdk-demo](https://github.com/applauseadn/ios-sdk-demo),
+或是 `Swift` 的版本 [ios-sdk-demo-swift](https://github.com/applauseadn/ios-sdk-demo-swift),
+如果有任何串接上的問題, 也可以至 [Issue](https://github.com/applauseadn/ios-sdk-demo/issues) 中提出.
 
 ## 設計原生廣告 Layout
 1. 設計原生廣告的 Layout，可以參考範例專案的 ```CustomView.xib```
