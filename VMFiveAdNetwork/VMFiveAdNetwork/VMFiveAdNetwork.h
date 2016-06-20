@@ -9,7 +9,7 @@
 #import "VANativeAd.h"
 #import "VAAdView.h"
 #import "VAAdInterstitial.h"
-
+#import "VAAdRewardedVideo.h"
 #import "VAAdCellProvider.h"
 
 #import "VANativeAdViewRender.h"
