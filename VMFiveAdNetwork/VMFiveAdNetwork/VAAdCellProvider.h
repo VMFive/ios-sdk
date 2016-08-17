@@ -50,7 +50,7 @@ NSUInteger const kVAAdCellProviderAdOffsetInsertOnlyOne;
  
  
  */
-@interface VAAdCellProvider : NSObject <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface VAAdCellProvider : NSObject <UITableViewDelegate, UITableViewDataSource>
 
 /** @name Properties */
 @property (nonatomic, strong, nonnull) NSString *placement; ///< Placement name for ads
