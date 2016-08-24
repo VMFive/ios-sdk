@@ -44,6 +44,7 @@
 
 -(void)rewardedVideoDidClick:(nonnull VAAdRewardedVideo *)rewardedVideo;
 -(void)rewardedVideoDidFinishHandlingClick:(nonnull VAAdRewardedVideo *)rewardedVideo;
+-(nonnull NSString *)rewardedCustomString;
 -(void)rewardedVideo:(nonnull VAAdRewardedVideo *)rewardedVideo shouldReward:(nonnull VAAdRewarded *)rewarded;
 
 -(void)rewardedVideo:(nonnull VAAdRewardedVideo *)rewardedVideo didFailWithError:(nonnull NSError *)error;

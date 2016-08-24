@@ -40,7 +40,8 @@ typedef NS_ENUM(NSUInteger, VAAdViewType)
     kVAAdViewBanner = 1,    ///< Banner (32:5)
     kVAAdViewInterstitial,  ///< Interstitial (fullscreen)
     kVAAdViewCard,          ///< Card (customized size)
-    kVAAdViewNative         ///< Native (no size)
+    kVAAdViewNative,        ///< Native (no size)
+    kVAAdViewReward
 };
 
 /** Ad Campaign Type */
