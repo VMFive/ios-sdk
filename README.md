@@ -3,9 +3,9 @@
 - [安裝方法](https://github.com/applauseadn/ios-sdk#安裝方法)
 - [Demos](https://github.com/applauseadn/ios-sdk#demos)
 - 原生廣告
-   - [設計原生廣告 Layout](https://github.com/applauseadn/ios-sdk#設計原生廣告-layout)
-   - [載入並展示原生廣告](https://github.com/applauseadn/ios-sdk#載入並展示原生廣告)
-   - [在 TableView 中置入原生廣告](https://github.com/applauseadn/ios-sdk#在-tableview-中置入原生廣告)
+   - [設計原生廣告 Layout](https://github.com/applauseadn/ios-sdk/blob/master/Documents/NativeAd/NativeAdLayout.md)
+   - [載入並展示原生廣告](https://github.com/applauseadn/ios-sdk/blob/master/Documents/NativeAd/UseNativeAd.md)
+   - [在 TableView 中置入原生廣告](https://github.com/applauseadn/ios-sdk/blob/master/Documents/CellProvider/UseCellProvider.md)
 
 ## 概論
 原生廣告沒有固定的規格大小，需要透過應用程式開發者的巧思將廣告的素材重新設計與編排後融合到使用者介面之中。
