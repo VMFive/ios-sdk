@@ -14,3 +14,4 @@
 
 #import "VANativeAdViewRender.h"
 #import "VANativeAdViewRenderProtocol.h"
+#import "VAAdUserData.h"
