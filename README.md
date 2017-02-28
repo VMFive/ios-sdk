@@ -25,7 +25,7 @@
 1. 下載最新版 [iOS SDK](https://github.com/VMFive/ios-sdk/releases)
 2. 解壓縮資料夾後, 在專案內選擇 `Add Files to YourProject`
 <br>
-<img src="https://raw.githubusercontent.com/VMFiveVMFive/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.02.14.png" width="289" height="226" />
+<img src="https://raw.githubusercontent.com/VMFive/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.02.14.png" width="289" height="226" />
 
 3. 選擇 `VMFiveAdNetwork` 資料夾加入
 <br>
