@@ -192,7 +192,7 @@ func clickableViews() -> [AnyObject] {
 ```
 </details>
 
-到這邊已經完成了客製化的製作, 完整的檔案內容可以從 [Objective-C](https://github.com/applauseadn/ios-sdk-demo/tree/master/ios-sdk-demo/Views/SampleView1) / [Swift](https://github.com/applauseadn/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/Views/SampleView1) 下載或是查看
+到這邊已經完成了客製化的製作, 完整的檔案內容可以從 [Objective-C](https://github.com/VMFive/ios-sdk-demo/tree/master/ios-sdk-demo/Views/SampleView1) / [Swift](https://github.com/VMFive/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/Views/SampleView1) 下載或是查看
 
 ## 備註
 除了上述的內容之外 `VANativeAdViewRenderProtocol` 提供了多樣化的素材可以使用, 下面為完整可使用列表
@@ -228,3 +228,4 @@ func clickableViews() -> [AnyObject] {
 // 設定該 view 所使用的 nib 檔案
 +(nonnull UINib *)nibForAd;
 ```
+VMFive

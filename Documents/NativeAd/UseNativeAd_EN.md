@@ -276,4 +276,4 @@ render.renderWithCompleteHandler({ [weak self] (view, error) in
 ```
 </details>
 
-You can see the ad in the center, even if the device is rotated. For details : [Objective-C](https://github.com/applauseadn/ios-sdk-demo/tree/master/ios-sdk-demo/ViewControllers/NativeAdSample1) / [Swift](https://github.com/applauseadn/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/ViewControllers/NativeAdSample1)
+You can see the ad in the center, even if the device is rotated. For details : [Objective-C](https://github.com/VMFive/ios-sdk-demo/tree/master/ios-sdk-demo/ViewControllers/NativeAdSample1) / [Swift](https://github.com/VMFive/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/ViewControllers/NativeAdSample1)

@@ -234,4 +234,5 @@ func adCellProviderDidFinishHandlingClick(adCellProvider: VAAdCellProvider) {
 ```
 </details>
 
-For details: [Objective-C](https://github.com/applauseadn/ios-sdk-demo/tree/master/ios-sdk-demo/ViewControllers/CellProviderSample1) / [Swift](https://github.com/applauseadn/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/ViewControllers/CellProviderSample1)
+For details: [Objective-C](https://github.com/VMFive/ios-sdk-demo/tree/master/ios-sdk-demo/ViewControllers/CellProviderSample1) / [Swift](https://github.com/VMFive/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/ViewControllers/CellProviderSample1)
+VMFive

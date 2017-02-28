@@ -278,4 +278,4 @@ render.renderWithCompleteHandler({ [weak self] (view, error) in
 ```
 </details>
 
-順利的話, 就可以看見廣告呈現在畫面中央, 即使手機旋轉, 依然可以保持置中, 詳細的 Demo 可以參考 [Objective-C](https://github.com/applauseadn/ios-sdk-demo/tree/master/ios-sdk-demo/ViewControllers/NativeAdSample1) / [Swift](https://github.com/applauseadn/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/ViewControllers/NativeAdSample1)
+順利的話, 就可以看見廣告呈現在畫面中央, 即使手機旋轉, 依然可以保持置中, 詳細的 Demo 可以參考 [Objective-C](https://github.com/VMFive/ios-sdk-demo/tree/master/ios-sdk-demo/ViewControllers/NativeAdSample1) / [Swift](https://github.com/VMFive/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/ViewControllers/NativeAdSample1)

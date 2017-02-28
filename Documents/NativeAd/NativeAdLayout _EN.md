@@ -190,7 +190,7 @@ func clickableViews() -> [AnyObject] {
 ```
 </details>
 
-Now we have finished the customization, you can check :[Objective-C](https://github.com/applauseadn/ios-sdk-demo/tree/master/ios-sdk-demo/Views/SampleView1) / [Swift](https://github.com/applauseadn/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/Views/SampleView1) 
+Now we have finished the customization, you can check :[Objective-C](https://github.com/VMFive/ios-sdk-demo/tree/master/ios-sdk-demo/Views/SampleView1) / [Swift](https://github.com/VMFive/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/Views/SampleView1) 
 
 ## Note
 Other than the above contents ,`VANativeAdViewRenderProtocol`provides a variety of contents. Below are the complete creatives:
@@ -226,3 +226,4 @@ Other than the above contents ,`VANativeAdViewRenderProtocol`provides a variety 
 // Return the nib for Ad
 +(nonnull UINib *)nibForAd;
 ```
+VMFive
