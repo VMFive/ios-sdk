@@ -1,11 +1,11 @@
 # iOS-SDK
-- [Introduction](https://github.com/applauseadn/ios-sdk#概論)
-- [Install SDK](https://github.com/applauseadn/ios-sdk#安裝方法)
-- [Demos](https://github.com/applauseadn/ios-sdk#demos)
+- [Introduction](https://github.com/VMFive/ios-sdk#introduction)
+- [Install SDK](https://github.com/VMFive/ios-sdk#install-sdk)
+- [Demos](https://github.com/VMFive/ios-sdk#demos)
 - Native Ad
-   - [Design Native Ad Layout](https://github.com/applauseadn/ios-sdk/blob/master/Documents/NativeAd/NativeAdLayout.md)
-   - [Load and Show Native Ad](https://github.com/applauseadn/ios-sdk/blob/master/Documents/NativeAd/UseNativeAd.md)
-   - [Insert Native Ad into TableView](https://github.com/applauseadn/ios-sdk/blob/master/Documents/CellProvider/UseCellProvider.md)
+   - [Design Native Ad Layout](https://github.com/VMFive/ios-sdk/blob/master/Documents/NativeAd/NativeAdLayout_EN.md)
+   - [Load and Show Native Ad](https://github.com/VMFive/ios-sdk/blob/master/Documents/NativeAd/UseNativeAd_EN.md)
+   - [Insert Native Ad into TableView](https://github.com/VMFive/ios-sdk/blob/master/Documents/CellProvider/UseCellProvider_EN.md)
 
 ## Introduction
 
