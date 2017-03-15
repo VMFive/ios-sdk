@@ -6,6 +6,7 @@
    - [設計原生廣告 Layout](https://github.com/VMFive/ios-sdk/blob/master/Documents/NativeAd/NativeAdLayout.md)
    - [載入並展示原生廣告](https://github.com/VMFive/ios-sdk/blob/master/Documents/NativeAd/UseNativeAd.md)
    - [在 TableView 中置入原生廣告](https://github.com/VMFive/ios-sdk/blob/master/Documents/CellProvider/UseCellProvider.md)
+- [Mopub 安裝](https://github.com/VMFive/ios-sdk/blob/master/Documents/Mopub/Mopub.md)
 
 ## 概論
 原生廣告沒有固定的規格大小，需要透過應用程式開發者的巧思將廣告的素材重新設計與編排後融合到使用者介面之中。
