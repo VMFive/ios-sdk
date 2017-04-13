@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-#import "VANativeAd.h"
+#import "VANativeAds.h"
 
 
 
@@ -138,6 +138,10 @@ typedef NS_ENUM(NSInteger, VAAdViewAutoRefreshTime)
                       rootViewController:(nullable UIViewController *)rootViewController
                               attributes:(nullable VANativeAdViewAttributeObject *)attributes;
 
+-(nonnull instancetype)initWithNativeAds:(nonnull VANativeAds *)nativeAds
+                      rootViewController:(nullable UIViewController *)rootViewController
+                              attributes:(nullable VANativeAdViewAttributeObject *)attributes;
+
 /**
  * Initialized VAAdView without attributes
  * @param placement Placement string tag
@@ -148,6 +152,11 @@ typedef NS_ENUM(NSInteger, VAAdViewAutoRefreshTime)
 -(nonnull instancetype)initWithplacement:(nonnull NSString *)placement
                                     adType:(VAAdType)adType
                         rootViewController:(nullable UIViewController *)rootViewController;
+
+-(nonnull instancetype)initWithNativeAds:(nonnull VANativeAds *)nativeAds
+                      rootViewController:(nullable UIViewController *)rootViewController;
+
+-(void)setupNativeAds:(nonnull VANativeAds *)nativeAds;
 
 /**
  * Load ad to display content of VAAdView

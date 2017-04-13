@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "VMFiveAdNetwork"
-  s.version      = "3.1.1"
+  s.version      = "3.1.2"
   s.summary      = "Largest Native Video Ad Network in Taiwan."
   s.homepage     = "https://github.com/VMFive/ios-sdk"
   s.license      = { :type => 'Commercial', :file => 'LICENSE.md' }
@@ -14,4 +14,3 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency 'ComScore', '~> 5.1.11'
 end
-

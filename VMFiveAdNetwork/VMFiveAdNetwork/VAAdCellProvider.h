@@ -79,6 +79,10 @@ NSUInteger const kVAAdCellProviderAdOffsetInsertOnlyOne;
                                tableView:(nonnull UITableView *)tableView
                            forAttributes:(nonnull VANativeAdViewAttributeObject *)attributes;
 
+-(nonnull instancetype)initWithNativeAds:(nonnull VANativeAds *)nativeAds
+                               tableView:(nonnull UITableView *)tableView
+                           forAttributes:(nonnull VANativeAdViewAttributeObject *)attributes;
+
 
 /** @name Delegates and DataSources */
 

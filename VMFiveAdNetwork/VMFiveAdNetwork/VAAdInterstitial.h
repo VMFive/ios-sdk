@@ -84,6 +84,8 @@
  */
 -(nonnull instancetype)initWithplacement:(nonnull NSString *)placement adType:(VAAdType)adType;
 
+-(nonnull instancetype)initWithNativeAds:(nonnull VANativeAds *)nativeAds;
+
 /**
  *  Load Ad
  */

@@ -20,6 +20,7 @@
 @property (nonatomic, assign) BOOL testMode;
 
 -(nonnull instancetype)initWithplacement:(nonnull NSString *)placement;
+-(nonnull instancetype)initWithNativeAds:(nonnull VANativeAds *)nativeAds;
 -(void)loadAd;
 -(void)show;
 

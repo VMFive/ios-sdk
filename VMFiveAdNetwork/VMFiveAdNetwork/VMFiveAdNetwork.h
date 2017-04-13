@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 VMFive. All rights reserved.
 //
 
-#import "VANativeAd.h"
+#import "VANativeAds.h"
 #import "VAAdView.h"
 #import "VAAdInterstitial.h"
 #import "VAAdRewardedVideo.h"

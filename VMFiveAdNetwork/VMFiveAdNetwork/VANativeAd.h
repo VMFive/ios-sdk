@@ -107,6 +107,8 @@ VAAD_EXPORT_PUBLIC
 VAAdType const kVAAdTypeCard;               ///< VAAdType for card ad
 VAAD_EXPORT_PUBLIC
 VAAdType const kVAAdTypeVideoCard;          ///< VAAdType for video card ad
+VAAD_EXPORT_PUBLIC
+VAAdType const kVAAdTypeVideoReward;
 
 /**
  *  Video Player Mode
@@ -160,6 +162,7 @@ typedef NS_ENUM(NSUInteger, VAAdPlayerDisplayMode) {
 @property (nonatomic, assign, readonly) VAAdType adType;
 
 @property (nonatomic, copy, nonnull) NSString *apiKey;                      ///< API Key for publisher
+@property (nonatomic, copy, nullable) NSString *identifier;
 
 @property (nonatomic, weak, nullable) id <VANativeAdDelegate> delegate;     ///< NativeAd callback delegate. See [VANativeDelegate](../Protocols/VANativeAdDelegate.html)
 
