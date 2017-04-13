@@ -29,6 +29,20 @@
 
 ![](https://s3-ap-northeast-1.amazonaws.com/daidoujiminecraft/Daidouji/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2017-03-15+%E4%B8%8A%E5%8D%8811.49.51.png)
 
+## 串接上可能會遇到的問題
+
+### Swift 找不到 SDK 相關檔案
+請在專案的 `Build Setting` 中設定 `Objective-C Bridging Header` 如圖
+
+![](https://s3-ap-northeast-1.amazonaws.com/daidoujiminecraft/Daidouji/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2017-04-13+%E4%B8%8B%E5%8D%881.59.18.png)
+
+檔案的內容可參考 [Bridging.h](https://github.com/VMFive/ios-sdk-demo-swift/blob/feature/fix_for_swift3/ios-sdk-demo-swift/Bridging.h)
+
+### Swift 中 @import mopub_ios_sdk; 出現錯誤
+根據 `Mopub` 版本不同, build 出來的 framework 名稱會有所差異, 舊版本可能會叫 `mopub_ios_sdk`, 新版本目前叫 `MoPub`, 至於到底要用什麼名字才是正確的, 可以從 `Pods/Products` 中確認, 如圖
+
+![](https://s3-ap-northeast-1.amazonaws.com/daidoujiminecraft/Daidouji/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2017-04-13+%E4%B8%8B%E5%8D%882.06.57.png)
+
 ## 設定 Mopub 網頁
 
 在建立廣告時, 請將下面兩個欄位填入相對應的內容
