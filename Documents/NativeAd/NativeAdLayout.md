@@ -15,6 +15,7 @@
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 #import <VMFiveAdNetwork/VMFiveAdNetwork.h>
 
@@ -22,14 +23,16 @@
 
 @end
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 extension SampleView1: VANativeAdViewRenderProtocol {
 }
 ```
+
 </details>
 
 ## 影片顯示區域
@@ -38,20 +41,23 @@ extension SampleView1: VANativeAdViewRenderProtocol {
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 - (UIView *)nativeVideoView {
     return self.videoView;
 }
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 func nativeVideoView() -> UIView {
     return self.videoView
 }
 ```
+
 </details>
 
 ## 主要顯示訊息
@@ -59,20 +65,23 @@ func nativeVideoView() -> UIView {
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 - (UILabel *)nativeTitleTextLabel {
     return self.titleLabel;
 }
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 func nativeTitleTextLabel() -> UILabel {
     return self.titleLabel
 }
 ```
+
 </details>
 
 ## 可變動字樣 CTA Button
@@ -84,20 +93,23 @@ func nativeTitleTextLabel() -> UILabel {
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 - (UILabel *)nativeCallToActionTextLabel {
     return self.ctaLabel;
 }
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 func nativeCallToActionTextLabel() -> UILabel {
     return self.ctaLabel
 }
 ```
+
 </details>
 
 ### 利用 KVO 特性 在收到變化時改變 Button 內容
@@ -105,6 +117,7 @@ func nativeCallToActionTextLabel() -> UILabel {
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 #pragma mark - KVO
 
@@ -129,10 +142,11 @@ func nativeCallToActionTextLabel() -> UILabel {
     [self removeObserver:self forKeyPath:@"ctaLabel.text"];
 }
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 // MARK: KVO
 extension SampleView1 {
@@ -161,6 +175,7 @@ class SampleView1: UIView {
     
 }
 ```
+
 </details>
 
 ## nib 檔案連結與 CTA 元件設定
@@ -168,6 +183,7 @@ class SampleView1: UIView {
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 + (UINib *)nibForAd {
     return [UINib nibWithNibName:@"SampleView1" bundle:nil];
@@ -177,10 +193,11 @@ class SampleView1: UIView {
     return @[ self.ctaButton ];
 }
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 static func nibForAd() -> UINib {
      return UINib.init(nibName: "SampleView1", bundle: nil)
@@ -190,6 +207,7 @@ func clickableViews() -> [AnyObject] {
     return [ self.ctaButton ]
 }
 ```
+
 </details>
 
 到這邊已經完成了客製化的製作, 完整的檔案內容可以從 [Objective-C](https://github.com/VMFive/ios-sdk-demo/tree/master/ios-sdk-demo/Views/SampleView1) / [Swift](https://github.com/VMFive/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/Views/SampleView1) 下載或是查看
@@ -228,4 +246,5 @@ func clickableViews() -> [AnyObject] {
 // 設定該 view 所使用的 nib 檔案
 +(nonnull UINib *)nibForAd;
 ```
+
 VMFive
