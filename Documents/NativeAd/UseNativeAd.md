@@ -24,6 +24,7 @@
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,10 +46,11 @@
     [self.nativeAd unloadAd];
 }
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 private let nativeAd = VANativeAd(placement: "VMFiveAdNetwork_NativeAdSample1", adType:kVAAdTypeVideoCard)
     
@@ -71,6 +73,7 @@ override func viewWillDisappear(animated: Bool) {
     self.nativeAd.unloadAd()
 }
 ```
+
 </details>
 
 ## Implement VANativeAdDelegate
@@ -80,25 +83,29 @@ override func viewWillDisappear(animated: Bool) {
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 @interface NativeAdSample1ViewController : UIViewController <VANativeAdDelegate>
 
 @end
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 extension NativeAdSample1ViewController: VANativeAdDelegate {
 }
 ```
+
 </details>
 
 然後我們開始實作 `VANativeAdDelegate` 
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 #pragma mark - VANativeAdDelegate
 
@@ -133,10 +140,11 @@ extension NativeAdSample1ViewController: VANativeAdDelegate {
     NSLog(@"%s", sel_getName(_cmd));
 }
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 
 // 當廣告素材準備完畢時
@@ -170,6 +178,7 @@ func nativeAdDidFinishImpression(nativeAd: VANativeAd) {
     print("\(#function)")
 }
 ```
+
 </details>
 
 delegate 的部分並非全部都需要 implement, 可以依照各 App 的不同, 選擇接收不同的事件
@@ -186,6 +195,7 @@ delegate 的部分並非全部都需要 implement, 可以依照各 App 的不同
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 VANativeAdViewRender *render = [[VANativeAdViewRender alloc] initWithNativeAd:nativeAd customizedAdViewClass:[SampleView1 class]];
         
@@ -198,10 +208,11 @@ VANativeAdViewRender *render = [[VANativeAdViewRender alloc] initWithNativeAd:na
     }
 }];
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 let render = VANativeAdViewRender(nativeAd: nativeAd, customizedAdViewClass: SampleView1.self)
 render.renderWithCompleteHandler({ (view, error) in
@@ -213,6 +224,7 @@ render.renderWithCompleteHandler({ (view, error) in
     }
 })
 ```
+
 </details>
 
 ## 擺放至指定位置
@@ -221,6 +233,7 @@ render.renderWithCompleteHandler({ (view, error) in
 
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 VANativeAdViewRender *render = [[VANativeAdViewRender alloc] initWithNativeAd:nativeAd customizedAdViewClass:[SampleView1 class]];
         
@@ -246,10 +259,11 @@ __weak NativeAdSample1ViewController *weakSelf = self;
     }
 }];
 ```
-</details>
 
+</details>
 <details>
 <summary>Swift</summary>
+
 ```swift
 let render = VANativeAdViewRender(nativeAd: nativeAd, customizedAdViewClass: SampleView1.self)
 render.renderWithCompleteHandler({ [weak self] (view, error) in
@@ -276,6 +290,7 @@ render.renderWithCompleteHandler({ [weak self] (view, error) in
     }
 })
 ```
+
 </details>
 
 順利的話, 就可以看見廣告呈現在畫面中央, 即使手機旋轉, 依然可以保持置中, 詳細的 Demo 可以參考 [Objective-C](https://github.com/VMFive/ios-sdk-demo/tree/master/ios-sdk-demo/ViewControllers/NativeAdSample1) / [Swift](https://github.com/VMFive/ios-sdk-demo-swift/tree/master/ios-sdk-demo-swift/ViewControllers/NativeAdSample1)
