@@ -13,7 +13,7 @@ Native Ads do not require fixed layout and sizes. Application developers arrange
 
 Native Ads **bring more revenue and friendly user experience** then typical banners.
 
-Besides the place developers pf banners，developers can place ads in more places to **create more revenue**
+Besides the banners，developers can place ads in more places to **create more revenue**
 
 **iOS SDK devices above iOS 7.0 **
 ## Install SDK
