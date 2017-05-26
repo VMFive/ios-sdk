@@ -15,6 +15,7 @@
 
 @property (nonnull, nonatomic, readonly) NSString *placement;
 @property (nonnull, nonatomic, copy) NSString *apiKey;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *keywords;
 @property (nullable, nonatomic, weak) id<VAAdRewardedVideoDelegate> delegate;
 @property (nonatomic, assign) VAAdType adType;
 @property (nonatomic, assign) BOOL testMode;

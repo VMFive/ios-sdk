@@ -56,6 +56,7 @@ NSUInteger const kVAAdCellProviderAdOffsetInsertOnlyOne;
 @property (nonatomic, strong, nonnull) NSString *placement; ///< Placement name for ads
 @property (nonatomic, assign, readonly) VAAdType adType; ///< Type for playable or video
 @property (nonatomic, copy, nonnull) NSString *apiKey;                      ///< API Key for publisher
+@property (nonatomic, strong, nullable) NSArray<NSString *> *keywords;
 @property (nonatomic, strong, nullable) VANativeAdViewAttributeObject *attributes; ///< NativeAd attributes setting object
 
 /**

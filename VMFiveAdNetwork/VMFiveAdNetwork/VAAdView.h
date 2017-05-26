@@ -79,6 +79,8 @@ typedef NS_ENUM(NSInteger, VAAdViewAutoRefreshTime)
  */
 @property (nonatomic, copy, nonnull) NSString *apiKey;
 
+@property (nonatomic, strong, nullable) NSArray<NSString *> *keywords;
+
 /**
  RootViewController of view hierarchy that VAAdView will be in.
  

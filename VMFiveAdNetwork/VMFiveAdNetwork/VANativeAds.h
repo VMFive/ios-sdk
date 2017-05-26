@@ -16,9 +16,11 @@
 
 @property (nonatomic, nullable, readonly) VANativeAd *nativeAd;
 @property (nonatomic, readonly) VAAdType adType;
+@property (nonatomic, nullable, readonly) NSArray<NSString *> *keywords;
 @property (nonatomic, readonly) BOOL testMode;
 
 +(nonnull instancetype)use:(nonnull NSArray<VANativeAdProperty *> *)adProperties withAdType:(VAAdType)adType isTestMode:(BOOL)testMode;
++(nonnull instancetype)use:(nonnull NSArray<VANativeAdProperty *> *)adProperties withAdType:(VAAdType)adType keywoards:(nullable NSArray<NSString *> *)keywords isTestMode:(BOOL)testMode;
 
 -(void)loadAd;
 -(void)loadAdWithSettings:(nonnull void (^)(VANativeAd* _Nonnull nativeAd))settings;

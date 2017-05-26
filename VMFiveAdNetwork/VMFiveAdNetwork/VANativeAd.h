@@ -163,6 +163,7 @@ typedef NS_ENUM(NSUInteger, VAAdPlayerDisplayMode) {
 
 @property (nonatomic, copy, nonnull) NSString *apiKey;                      ///< API Key for publisher
 @property (nonatomic, copy, nullable) NSString *identifier;
+@property (nonatomic, copy, nullable) NSArray<NSString *> *keywords;
 
 @property (nonatomic, weak, nullable) id <VANativeAdDelegate> delegate;     ///< NativeAd callback delegate. See [VANativeDelegate](../Protocols/VANativeAdDelegate.html)
 

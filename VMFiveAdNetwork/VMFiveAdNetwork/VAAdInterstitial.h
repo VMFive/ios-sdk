@@ -63,6 +63,7 @@
 @property (nonatomic, copy, readonly, nonnull) NSString *placement; ///< Placement string tag
 @property (nonatomic, assign) VAAdType adType;
 @property (nonatomic, copy, nonnull) NSString *apiKey;                      ///< API Key for publisher
+@property (nonatomic, strong, nullable) NSArray<NSString *> *keywords;
 @property (nonatomic, weak, nullable) id<VAAdInterstitialDelegate> delegate; ///< VAAdInterstitial callback delegate
 
 /**
