@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "VMFiveAdNetwork"
-  s.version      = "3.1.3"
+  s.version      = "3.1.4"
   s.summary      = "Largest Native Video Ad Network in Taiwan."
   s.homepage     = "https://github.com/VMFive/ios-sdk"
   s.license      = { :type => 'Commercial', :file => 'LICENSE.md' }
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/VMFive/ios-sdk.git", :tag => s.version.to_s }
   s.source_files = "VMFiveAdNetwork/VMFiveAdNetwork/*.h"
   s.vendored_libraries = "VMFiveAdNetwork/*.a"
-  s.frameworks   = "CoreMedia", "CoreFoundation", "AdSupport", "CoreTelephony", "CoreLocation", "SystemConfiguration", "AVFoundation"
+  s.frameworks   = "CoreBluetooth", "CoreMedia", "CoreFoundation", "AdSupport", "CoreTelephony", "CoreLocation", "SystemConfiguration", "AVFoundation"
   s.libraries = 'z'
   s.requires_arc = true
   s.dependency 'ComScore', '~> 5.1.11'
