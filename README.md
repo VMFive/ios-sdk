@@ -69,6 +69,11 @@
 <br>
 <img src="https://raw.githubusercontent.com/VMFive/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8A%E5%8D%8810.54.26.png" width="890" height="233" />
 
+### 允許總是使用地理位置權限 (OPTIONAL)
+在 `info.plist` 中加入 `Privacy - Location Always Usage Description`
+<br>
+<img src="https://raw.githubusercontent.com/VMFive/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202017-06-05%20%E4%B8%8B%E5%8D%886.28.10.png"  width="519" height="93" />
+
 ## Demos
 
  - [Objective-C Demo](https://github.com/VMFive/ios-sdk-demo)
