@@ -18,7 +18,7 @@ Besides the banners，developers can place ads in more places to **create more r
 **iOS SDK devices above iOS 7.0 **
 ## Install SDK
 ### CocoaPods
-1. In `Podfile` , add `pod 'VMFiveAdNetwork', '~> 3.1.5'`
+1. In `Podfile` , add `pod 'VMFiveAdNetwork', '~> 3.1.6'`
 2. Use `pod install` to install SDK.
 
 ### Manually Install SDK
@@ -35,7 +35,7 @@ Besides the banners，developers can place ads in more places to **create more r
 <br>
 <img src="https://raw.githubusercontent.com/applauseadn/ios-sdk/master/Images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-12%20%E4%B8%8A%E5%8D%8810.13.53.png" width="141" height="188" />
 
-5. In `Build Phases`, add the following framework in `Link Binary With Libraies` 
+5. In `Build Phases`, add the following framework in `Link Binary With Libraies`
 	* ```CoreMedia.framework```
 	* ```CoreFoundation.framework```
 	* ```AdSupport.framework```
