@@ -39,6 +39,7 @@ typedef NS_ENUM(NSUInteger, VAAdViewType)
     kVAAdViewUnknow = 0,    ///< Default Zero
     kVAAdViewBanner = 1,    ///< Banner (32:5)
     kVAAdViewInterstitial,  ///< Interstitial (fullscreen)
+    kVAAdViewSplash,
     kVAAdViewCard,          ///< Card (customized size)
     kVAAdViewNative,        ///< Native (no size)
     kVAAdViewReward
@@ -103,6 +104,8 @@ VAAD_EXPORT_PUBLIC
 VAAdType const kVAAdTypeInterstitial;       ///< VAAdType for interstitial ad
 VAAD_EXPORT_PUBLIC
 VAAdType const kVAAdTypeVideoInterstitial;  ///< VAAdType for video interstitial ad
+VAAD_EXPORT_PUBLIC
+VAAdType const kVAAdTypeVideoSplash;
 VAAD_EXPORT_PUBLIC
 VAAdType const kVAAdTypeCard;               ///< VAAdType for card ad
 VAAD_EXPORT_PUBLIC
