@@ -18,7 +18,7 @@ Besides the banners，developers can place ads in more places to **create more r
 **iOS SDK devices above iOS 7.0 **
 ## Install SDK
 ### CocoaPods
-1. In `Podfile` , add `pod 'VMFiveAdNetwork', '~> 3.1.8'`
+1. In `Podfile` , add `pod 'VMFiveAdNetwork', '~> 3.1.9'`
 2. Use `pod install` to install SDK.
 
 ### Manually Install SDK

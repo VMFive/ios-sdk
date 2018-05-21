@@ -19,7 +19,7 @@
 
 ## 安裝方法
 ### CocoaPods
-1. 在 `Podfile` 內加入 `pod 'VMFiveAdNetwork', '~> 3.1.8'`
+1. 在 `Podfile` 內加入 `pod 'VMFiveAdNetwork', '~> 3.1.9'`
 2. 使用 `pod install` 安裝
 
 ### 手動
